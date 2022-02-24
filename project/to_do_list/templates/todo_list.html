@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if not todo__list %}
+
+<article>
+    <h3>No items to show.</h3>
+</article>
+
+    {% endif %}
+
+{% for todo in todo_list %}
+
+<article>
+    <p> {{ todo.title  }} </p>
+    <h3> {{ todo.priority }} </h3>
+</article>
+
+{% endfor %}
+
+{% endblock %}
